@@ -1,3 +1,4 @@
+/*
 int pinoR = 11;
 int pinoB = 10;
 int pinoG = 9;
@@ -20,3 +21,5 @@ void loop() {
     delay(500);
     analogWrite(pinoG, 0);
 }
+*/
+
