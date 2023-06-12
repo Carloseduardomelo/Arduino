@@ -15,22 +15,15 @@ void setup(){
 void loop(){
     press = digitalRead(botao);
     if (press == HIGH){;
-        switch(del){
-            case 0:
+        if (del == 0){
             analogWrite(pinoV, 255);
             del += 1;
-            
-            break;
-            case 1:
-            analogWrite(pinoV,0);
-            analogWrite(pinoA, 255);
+        }else if (del == 2){
+            analogWrite(pinoA,255);
             del += 1;
-            break;
-            case 2:
-            analogWrite(pinoA,0);
-            analogWrite(pinoD, 255);
-            del -= 2;
-            break; 
+        }else{
+            analogWrite(pinoD,255);
+            del -=2;
         }
     }
 }
